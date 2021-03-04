@@ -112,7 +112,7 @@ export async function resolvePageComponent (route: IComponentRoute, info: IRouti
 	let cmp = route.component;
 	if (cmp instanceof Function) {
 		try {
-			cmp = (cmp as Function)();
+			cmp = (cmp as Function)(info);
 		} catch (err) {
 
 			// The invocation most likely failed because the function is a class.
