@@ -16,7 +16,7 @@
 		"url": "git+https://github.com/andreasbm/router-slot.git"
 	},
   "files": [
-    "dist"
+    "**/*"
   ],
 	"keywords": [
 		"webapp",
