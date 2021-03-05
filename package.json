@@ -15,6 +15,9 @@
 		"type": "git",
 		"url": "git+https://github.com/andreasbm/router-slot.git"
 	},
+  "files": [
+    "dist"
+  ],
 	"keywords": [
 		"webapp",
 		"custom",
@@ -43,7 +46,7 @@
 		"ncu": "ncu -u -a && npm update && npm install",
 		"b:lib": "node pre-build.js && tsc -p tsconfig.build.json && npm run custom-elements-json",
 		"readme": "node node_modules/.bin/readme generate",
-    "prepare": "npm run b:lib",
+    "prepare": "npm run b:lib && mv build/* .",
 		"postversion": "npm run readme && npm run b:lib",
 		"publish:patch": "np patch --contents=dist --no-cleanup",
 		"publish:minor": "np minor --contents=dist --no-cleanup",
